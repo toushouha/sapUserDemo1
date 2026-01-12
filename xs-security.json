@@ -1,0 +1,17 @@
+{
+  "xsappname": "cap-odata-demo",
+  "tenant-mode": "shared",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Display",
+      "description": "Display access"
+    }
+  ],
+  "oauth2-configuration": {
+    "redirect-uris": [
+      "https://*"
+    ]
+  },
+  "attributes": [],
+  "role-templates": []
+}

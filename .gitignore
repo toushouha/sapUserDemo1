@@ -1,0 +1,25 @@
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# CDS build output
+gen/
+.cds-services.json
+
+# MTA build output
+mta_archives/
+*.mtar
+
+# VSCode
+.vscode/
+
+# Environment
+.env
+default-env.json
+
+# Logs
+*.log
+
+# Java build
+target/
