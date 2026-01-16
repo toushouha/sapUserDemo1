@@ -1,0 +1,32 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          cap-client:
+            provider: xsuaa
+            authorization-grant-type: client_credentials
+            client-id: sb-cap-odata-demo!t408230
+            client-secret: xxxxxxx
+        provider:
+          xsuaa:
+            token-uri: https://wg09-z8x0k7po.authentication.us10.hana.ondemand.com/oauth/token
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      enabled: true
+
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+
+security:
+  basic:
+    enabled: false
+
+cap:
+  odata:
+    url: "https://akkodis-consulting-ltd--wg09-z8x0k7po-dev-cap-odata-demo.cfapps.us10-001.hana.ondemand.com/odata/v4/CatalogService/Products(1)"

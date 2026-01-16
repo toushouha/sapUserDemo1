@@ -10,20 +10,9 @@
         },
         "Name": {
           "type": "cds.String"
-        }
-      }
-    },
-    "WhoAmIResult": {
-      "kind": "type",
-      "elements": {
-        "isUser": {
+        },
+        "deleteFlg": {
           "type": "cds.Boolean"
-        },
-        "user_name": {
-          "type": "cds.String"
-        },
-        "client_id": {
-          "type": "cds.String"
         }
       }
     },
@@ -40,6 +29,9 @@
         },
         "Name": {
           "type": "cds.String"
+        },
+        "deleteFlg": {
+          "type": "cds.Boolean"
         }
       },
       "projection": {

@@ -1,0 +1,12 @@
+applications:
+  - name: spring-batch-job
+    path: target/spring-batch-job-1.0.0.jar
+    memory: 1G
+    buildpacks:
+      - java_buildpack
+    env:
+      SPRING_PROFILES_ACTIVE: cloud
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 17.+ } }'
+    services:
+      - cap-odata-demo-auth
+      - demo-destination

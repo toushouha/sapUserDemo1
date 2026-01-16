@@ -62,6 +62,16 @@ modules:
           app-uri: ${default-uri}
           url: ${default-url}
 
+  - name: spring-batch-job
+    type: java
+    path: spring-batch-job
+    build-parameters:
+      builder: maven
+      build-result: target/*.jar
+    requires:
+      - name: xsuaa-cap
+
+
 resources:
   - name: cap-odata-demo-auth
     type: org.cloudfoundry.managed-service
@@ -85,3 +95,20 @@ resources:
     parameters:
       service: hana
       service-plan: hdi-shared
+  - name: xsuaa-cap
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: xsuaa
+      service-plan: application
+      config:
+        xsappname: cap-odata-demo
+        tenant-mode: shared
+        scopes:
+          - name: batch.read
+            description: "Scope for Spring Batch job"
+        role-templates:
+          - name: BatchJobRole
+            description: "Role for Spring Batch job"
+            scope-references:
+              - batch.read
+

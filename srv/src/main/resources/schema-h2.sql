@@ -6,6 +6,7 @@ DROP TABLE IF EXISTS demo_Products;
 CREATE TABLE demo_Products (
   ID INTEGER NOT NULL,
   Name NVARCHAR(255),
+  deleteFlg BOOLEAN,
   PRIMARY KEY(ID)
 );
 
@@ -26,5 +27,6 @@ CREATE TABLE cds_outbox_Messages (
 
 CREATE VIEW CatalogService_Products AS SELECT
   Products_0.ID,
-  Products_0.Name
+  Products_0.Name,
+  Products_0.deleteFlg
 FROM demo_Products AS Products_0;

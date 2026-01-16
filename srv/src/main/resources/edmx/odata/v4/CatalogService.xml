@@ -25,6 +25,7 @@
         </Key>
         <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
         <Property Name="Name" Type="Edm.String"/>
+        <Property Name="deleteFlg" Type="Edm.Boolean"/>
       </EntityType>
     </Schema>
   </edmx:DataServices>

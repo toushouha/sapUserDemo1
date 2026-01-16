@@ -1,4 +1,4 @@
-ID;Name
-1;Product A
-2;Product B
-3;Product C
+ID;Name;deleteFlg
+1;Product A;false
+2;Product B;false
+3;Product C;false
