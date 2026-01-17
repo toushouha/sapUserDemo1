@@ -6,6 +6,7 @@ import com.sap.cds.services.handler.annotations.ServiceName;
 import com.sap.cds.services.request.UserInfo;
 import com.sap.cds.services.cds.CdsReadEventContext;
 import org.springframework.stereotype.Component;
+import org.springframework.security.access.annotation.Secured;
 
 import java.util.Map;
 
@@ -19,6 +20,7 @@ public class WhoAmIHandler implements EventHandler {
         this.user = user;
     }
 
+    @Secured({ "cap-odata-demo.User", "cap-odata-demo.batch.read" })
     @On(event = "READ", entity = "CatalogService.Products")
     public void onReadProducts(CdsReadEventContext context) {
 

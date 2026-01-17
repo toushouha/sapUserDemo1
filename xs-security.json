@@ -38,5 +38,13 @@
 
   "foreign-scope-references": [],
 
-  "authorities": []
+  "authorities": [
+    {
+      "name": "$XSAPPNAME.batch.read",
+      "description": "Authority for batch operations",
+      "grant-as-authority-to-apps": [
+        "spring-batch-job"
+      ]
+    }
+  ]
 }
