@@ -6,11 +6,11 @@ spring:
           cap-client:
             provider: xsuaa
             authorization-grant-type: client_credentials
-            client-id: sb-cap-odata-demo!t408230
-            client-secret: xxxxxxx
+            client-id: ${XSUAA_CLIENT_ID}
+            client-secret: ${XSUAA_CLIENT_SECRET}
         provider:
           xsuaa:
-            token-uri: https://wg09-z8x0k7po.authentication.us10.hana.ondemand.com/oauth/token
+            token-uri: ${XSUAA_TOKEN_URI}
   batch:
     jdbc:
       initialize-schema: always
@@ -29,4 +29,4 @@ security:
 
 cap:
   odata:
-    url: "https://akkodis-consulting-ltd--wg09-z8x0k7po-dev-cap-odata-demo.cfapps.us10-001.hana.ondemand.com/odata/v4/CatalogService/Products(1)"
+    url: "https://xxxx.cfapps.us10-001.hana.ondemand.com/odata/v4/CatalogService/Products(1)"

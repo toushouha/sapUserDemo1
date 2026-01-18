@@ -28,10 +28,16 @@ public class WhoAmIHandler implements EventHandler {
 
         boolean isUser = user.isAuthenticated() && user.getName() != null;
 
-        System.out.println(user);
-        System.out.println("isUser:" + isUser);
-        System.out.println(user.getName());
-        System.out.println(user.getAdditionalAttribute("client_id"));
+        System.out.println("User Info: " + user);
+        System.out.println("Is Real User: " + isUser);
+        System.out.println("User Name: " + user.getName());
+        System.out.println("Client ID: " + user.getAdditionalAttribute("client_id"));
+        
+        if (isUser) {
+            System.out.println(">>> Real user accessing: " + user.getName());
+        } else {
+            System.out.println(">>> Service account accessing: " + user.getAdditionalAttribute("client_id"));
+        }
     }
 
 }
